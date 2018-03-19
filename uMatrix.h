@@ -5,9 +5,14 @@ class uMatrix
     private: 
         //You probably should have some privately accessible helper things ...
         // like data structures?
-        
+		int elementCount;
+		int sqrt;
+		int matrix[10000];
     public:
-        uMatrix(/*???*/);
+		//Constructor. Sets elementCount, sqrt, scaler, and fills the matrix. 
+        uMatrix(int input[], int size);
+
+		//Destructor. Deletes the array of values.  
         ~uMatrix();
         
         /**
@@ -71,7 +76,5 @@ class uMatrix
          * @output a new object of type uMatrix such that every element in A is increased by S
          */
         uMatrix SAf(int S);
-         
-        
 };
 
